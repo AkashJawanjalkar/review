@@ -1,0 +1,85 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout">
+
+    <Page
+        id="page"
+        title="Approval Corner"
+        showHeader="true"
+        class="sapUiContentPadding">
+
+        <content>
+
+            <!-- HEADER -->
+            <VBox   class="sapUiSmallMarginBottom">
+                <Title text="Welcome to Approval Corner" level="H2"/>
+                <Text text="Manage approvals, review cycles and reports"/>
+            </VBox>
+
+            <!-- TILE LAYOUT -->
+            <layout:Grid
+                defaultSpan="XL4 L4 M6 S12"
+                vSpacing="1"
+                hSpacing="1">
+
+                <!-- WORK INBOX -->
+                <GenericTile
+                    header="Approval Corner"
+                    subheader="Work Inbox"
+                    press="onWorkInbox"
+                    frameType="OneByOne">
+
+                    <tileContent>
+                        <TileContent>
+                            <content>
+                                <NumericContent
+                                    icon="sap-icon://inbox"
+                                    withMargin="false"/>
+                            </content>
+                        </TileContent>
+                    </tileContent>
+                </GenericTile>
+
+                <!-- REVIEW CYCLES -->
+                <GenericTile
+                    header="Review Cycles"
+                    subheader="Admin View"
+                    press="onReviewCycles"
+                    frameType="OneByOne">
+
+                    <tileContent>
+                        <TileContent>
+                            <content>
+                                <NumericContent
+                                    icon="sap-icon://overview-chart"
+                                    withMargin="false"/>
+                            </content>
+                        </TileContent>
+                    </tileContent>
+                </GenericTile>
+
+                <!-- REPORTS -->
+                <GenericTile
+                    header="Reports"
+                    subheader="Status & SoD"
+                    press="onReports"
+                    frameType="OneByOne">
+
+                    <tileContent>
+                        <TileContent>
+                            <content>
+                                <NumericContent
+                                    icon="sap-icon://business-objects-experience"
+                                    withMargin="false"/>
+                            </content>
+                        </TileContent>
+                    </tileContent>
+                </GenericTile>
+
+            </layout:Grid>
+
+        </content>
+    </Page>
+</mvc:View>
